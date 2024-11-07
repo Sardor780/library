@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">biblioteka</string>
+    <!-- Другие строки -->
+    <string-array name="book_status_options">
+        <item>"Планирую"</item>
+        <item>"Читаю"</item>
+        <item>Нет статуса</item>
+        <string name="app_name">"BookMobile"</string>
+        <string name="subtitle">"Ваш список книг для чтения"</string>
+        <string name="login_button">"Войти"</string>
+    </string-array>
+</resources>

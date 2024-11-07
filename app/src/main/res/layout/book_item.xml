@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A2A3E"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Первый блок книги -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/border">
+
+            <!-- Обложка книги -->
+            <ImageView
+                android:id="@+id/book_cover_1"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/book_1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Название книги -->
+                <TextView
+                    android:id="@+id/book_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Богатый папа бедный папа"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Автор книги -->
+                <TextView
+                    android:id="@+id/book_author_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Роберт Киосаки"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <!-- Жанр книги -->
+                <TextView
+                    android:id="@+id/book_genre_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Жанр: личные финансы, предпринимательство, инвестиции и бизнес"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Количество страниц -->
+                <TextView
+                    android:id="@+id/book_pages_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Страниц: 352"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Дата добавления книги -->
+                <TextView
+                    android:id="@+id/book_added_date_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавлено: 16.10.2024"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Статус (планирую, читаю и т.д.) -->
+                <Spinner
+                    android:id="@+id/book_status_spinner_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#FF9800"
+                    android:entries="@array/book_status_options"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Лайки -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/like_icon_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_thumb_up_24" />
+
+                    <TextView
+                        android:id="@+id/like_count_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1997"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Второй блок книги (копируем структуру первой книги) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Обложка книги -->
+            <ImageView
+                android:id="@+id/book_cover_2"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/gerry" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Название книги -->
+                <TextView
+                    android:id="@+id/book_title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Гарри Поттер и философский камень"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Автор книги -->
+                <TextView
+                    android:id="@+id/book_author_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Джоан Роулинг"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <!-- Жанр книги -->
+                <TextView
+                    android:id="@+id/book_genre_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Жанр: фэнтези"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Количество страниц -->
+                <TextView
+                    android:id="@+id/book_pages_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Страниц: 432"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Дата добавления книги -->
+                <TextView
+                    android:id="@+id/book_added_date_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавлено: 16.10.2024"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Статус (планирую, читаю и т.д.) -->
+                <Spinner
+                    android:id="@+id/book_status_spinner_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#FF9800"
+                    android:entries="@array/book_status_options"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Лайки -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/like_icon_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_thumb_up_24" />
+
+                    <TextView
+                        android:id="@+id/like_count_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1997"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <!-- Обложка книги -->
+            <ImageView
+                android:id="@+id/book_cover_4"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/bronte" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Название книги -->
+                <TextView
+                    android:id="@+id/book_title_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Агнес Грей"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Автор книги -->
+                <TextView
+                    android:id="@+id/book_author_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Автор: Энн Бронте"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <!-- Жанр книги -->
+                <TextView
+                    android:id="@+id/book_genre_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Жанр: Эксклюзивная классика"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Количество страниц -->
+                <TextView
+                    android:id="@+id/book_pages_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Страниц: 256"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Дата добавления книги -->
+                <TextView
+                    android:id="@+id/book_added_date_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавлено: 20.10.2024"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Статус (планирую, читаю и т.д.) -->
+                <Spinner
+                    android:id="@+id/book_status_spinner_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#FF9800"
+                    android:entries="@array/book_status_options"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- Лайки -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:id="@+id/like_icon_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_thumb_up_24" />
+
+                    <TextView
+                        android:id="@+id/like_count_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <!-- Обложка книги -->
+            <ImageView
+                android:id="@+id/book_cover_5"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/agete" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Название книги -->
+                <TextView
+                    android:id="@+id/book_title_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Вечеринка в Хэллоуин"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <!-- Автор книги -->
+                <TextView
+                    android:id="@+id/book_author_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Автор: Агата Кристи"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <!-- Жанр книги -->
+                <TextView
+                    android:id="@+id/book_genre_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Жанр: Роман"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Количество страниц -->
+                <TextView
+                    android:id="@+id/book_pages_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Страниц: 320"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Дата добавления книги -->
+                <TextView
+                    android:id="@+id/book_added_date_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавлено: 20.10.2024"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Статус (планирую, читаю и т.д.) -->
+                <Spinner
+                    android:id="@+id/book_status_spinner_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#FF9800"
+                    android:entries="@array/book_status_options"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- Лайки -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:id="@+id/like_icon_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_thumb_up_24" />
+
+                    <TextView
+                        android:id="@+id/like_count_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2024"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <!-- Обложка книги -->
+            <ImageView
+                android:id="@+id/book_cover_6"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/remark" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Название книги -->
+                <TextView
+                    android:id="@+id/book_title_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ремарк"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Автор книги -->
+                <TextView
+                    android:id="@+id/book_author_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Эрих Мария"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <!-- Жанр книги -->
+                <TextView
+                    android:id="@+id/book_genre_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Жанр: эксклюзивная классика"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Количество страниц -->
+                <TextView
+                    android:id="@+id/book_pages_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Страниц: 294"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Дата добавления книги -->
+                <TextView
+                    android:id="@+id/book_added_date_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавлено: 20.10.2024"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <!-- Статус (планирую, читаю и т.д.) -->
+                <Spinner
+                    android:id="@+id/book_status_spinner_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#FF9800"
+                    android:entries="@array/book_status_options"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- Лайки -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:id="@+id/like_icon_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_thumb_up_24" />
+
+                    <TextView
+                        android:id="@+id/like_count_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
